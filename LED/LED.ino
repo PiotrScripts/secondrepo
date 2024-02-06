@@ -1,3 +1,5 @@
+int led = 2;
+
 // the setup routine runs once when you press reset:
 void setup() {
   // initialize serial communication at 9600 bits per second:
@@ -12,9 +14,9 @@ void loop() {
   Serial.println(knobValue);
 
   if(knobValue > 400) {
-    digitalWrite(2, HIGH);
+    digitalWrite(led, HIGH);
   }
   else {
-    digitalWrite(2, 0);
+    digitalWrite(led, 0);
   }
 }
